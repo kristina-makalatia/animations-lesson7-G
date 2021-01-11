@@ -1,0 +1,94 @@
+.bg-image {
+	background-image: url('../img/photographer.jpg');
+	height: 600px;
+	width: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+}
+.text-image {
+	position: absolute;
+	top: 150px;
+	left: 100px;
+	color: #fff;
+}
+
+/*Button*/
+.button-wraper {
+	width: 190px;
+	height: 70px;
+	background-color: #FF7A00;
+	border-radius: 3px;
+	/*margin: 0 auto;*/
+	position:absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+.container-wraper {
+	position: relative;
+	height: 200px;
+}
+
+.box-wraper {
+	width: 400px;
+	height: 400px;
+	background-color: blue;
+	position: relative;
+/*	transition-property: all;
+	transition-duration: 0.5s;
+	transition-timing-function: linear;
+	transition-delay: 5s;*/
+	transition: all 0.5s linear 0.5s;
+	
+}
+.child-box {
+	width: 150px;
+	height: 150px;
+	background-color: red;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%) rotate(45deg);
+	transition: all 0.5s linear 0.5s;
+	animation: myanimation 5s infinite;
+}
+
+/*Hover effects*/
+/*.box-wraper:hover {
+	background-color: aqua;
+}
+.child-box:hover {
+	background-color: yellow;
+	transform: translate(-50%,-50%) rotate(0deg);
+}
+*/
+/*.box-wraper:hover .child-box {
+	background-color: black;
+}*/
+.icon {
+	position: relative;
+	width: 800px; ;
+	
+}
+.icon-img {
+	height: 80px;
+	animation: iconmove 5s infinite;
+	position: absolute;
+}
+/*keyframes*/
+@keyframes myanimation {
+  0%   { transform: translate(-50%,-50%) rotate(45deg);background: red;}
+  25%  { transform:translate(-50%,-50%) rotate(90deg); background: blue;}
+  50%  { transform:translate(-50%,-50%) rotate(360deg); background: yellow;}
+  75%  {transform: translate(-50%,-50%) rotate(90deg); background: green;}
+  100% {transform:translate(-50%,-50%) rotate(45deg); background: red;}
+}
+
+@keyframes iconmove {
+	0% {transform: translateX(50px);}
+	25% {transform: translateX(150px);}
+	50% {transform: translateX(250px);}
+	100% {transform: translateX(450px);}
+}
